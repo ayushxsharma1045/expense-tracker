@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="Expense.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  
+  <div class="main">
+    <!-- Top Balance Section -->
+    <div class="balance-section">
+      <p id="bal">YOUR BALANCE</p>
+      <span id="BALANCE"><i class="fa-solid fa-indian-rupee-sign"></i>500.00</span>
+
+      <div class="inc-exp">
+        <div class="income">
+          <h4 id="inc">INCOME</h4>
+          <p id="inc-c"><i class="fa-solid fa-indian-rupee-sign"></i>700</p>
+        </div>
+        <div class="expense">
+          <h4 id="exp">EXPENSE</h4>
+          <p id="exp-c">-<i class="fa-solid fa-indian-rupee-sign"></i>0.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="content-area">
+      <!-- Left: Form -->
+      <div class="form-section">
+        <h3>Add New Transaction</h3>
+        <form id="form">
+          <div class="form-con">
+            <label for="text">Text</label>
+            <input type="text" placeholder="Your item" id="text">
+          </div>
+          <div class="form-con">
+            <label for="amount">Amount</label>
+            <input type="number" placeholder="Enter amount..." id="amount">
+          </div>
+          <div class="form-con">
+            <label for="profit-loss">Select Option:</label>
+            <select id="profit-loss" name="profit-loss">
+              <option value="">-- Select --</option>
+              <option value="profit">Profit</option>
+              <option value="loss">Loss</option>
+            </select>
+          </div>
+          <button class="btn">Add Transaction</button>
+        </form>
+      </div>
+
+      <!-- Right: History -->
+      <div class="history-section">
+        <h3>History</h3>
+        <ul id="list" class="list">
+          <!-- Example List Items -->
+          <!-- <li class="minus">cash <span>-₹400</span><button class="del">X</button></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="Expense.js"></script>
+</body>
+</html>
